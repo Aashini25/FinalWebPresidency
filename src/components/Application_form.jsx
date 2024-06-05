@@ -104,9 +104,6 @@ const AdmissionForm = ({ isVisible, onClose, onSubmit }) => {
           Application Form For Admission
         </h2>
 
-        <p className="text-center text-gray-500">
-          Lorem ipsum dolor sit amet consectetur adipiscing elit.
-        </p>
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
