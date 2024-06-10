@@ -64,7 +64,7 @@ const AdmissionForm = ({ isVisible, onClose, onSubmit }) => {
         <div className="flex justify-between items-center p-0 border-b-2 border-gray-200">
           <img src={logo} alt="logo" className="h-10" />
           <div className="hidden md:flex gap-5">
-            <li className="cursor-pointer" onClick={onClose}>
+            <li className="cursor-pointer">
               Home
             </li>
             <li>Life@</li>
