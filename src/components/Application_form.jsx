@@ -32,6 +32,7 @@ const AdmissionForm = ({ isVisible, onClose, onSubmit }) => {
       console.log("Response from API: ", response); 
       if (response.status === 200) {
         alert("Form submitted successfully!");
+        console.log(formData)
         // Optionally, you can reset the form or navigate to another page
         setFormData({
           fullName: "",
@@ -39,7 +40,6 @@ const AdmissionForm = ({ isVisible, onClose, onSubmit }) => {
           phone: "",
           course: ""
         });
-        onClose();
         onSubmit();
       } else {
         alert("Error submitting form");
@@ -53,7 +53,7 @@ const AdmissionForm = ({ isVisible, onClose, onSubmit }) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 px-8 max-sm:px-2">
       <div className="w-full max-w-3xl p-8 space-y-8 bg-white rounded-xl shadow-lg relative">
-{/*         <button
+        {/* <button
           onClick={onClose}
           className="absolute top-1 right-2 text-gray-500 hover:text-gray-700 h-12 w-12 scale-125"
         >
@@ -64,7 +64,7 @@ const AdmissionForm = ({ isVisible, onClose, onSubmit }) => {
         <div className="flex justify-between items-center p-0 border-b-2 border-gray-200">
           <img src={logo} alt="logo" className="h-10" />
           <div className="hidden md:flex gap-5">
-            <li className="cursor-pointer">
+            <li className="cursor-pointer" onClick={onClose}>
               Home
             </li>
             <li>Life@</li>
@@ -103,7 +103,6 @@ const AdmissionForm = ({ isVisible, onClose, onSubmit }) => {
         <h2 className="text-2xl font-bold text-center" style={{ color: '#FF7162' }}>
           Application Form For Admission
         </h2>
-
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
@@ -112,10 +111,10 @@ const AdmissionForm = ({ isVisible, onClose, onSubmit }) => {
               </label>
               <input
                 id="fullName"
-                name="fullName"
+                name="Full Name"
                 type="text"
                 required
-                value={formData.fullName}
+                value={formData["Full Name"]}
                 onChange={handleChange}
                 className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-600"
                 placeholder="Full Name"
@@ -127,10 +126,10 @@ const AdmissionForm = ({ isVisible, onClose, onSubmit }) => {
               </label>
               <input
                 id="email"
-                name="email"
+                name="Email"
                 type="email"
                 required
-                value={formData.email}
+                value={formData["Email"]}
                 onChange={handleChange}
                 className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-600"
                 placeholder="Email ID"
@@ -142,10 +141,10 @@ const AdmissionForm = ({ isVisible, onClose, onSubmit }) => {
               </label>
               <input
                 id="phone"
-                name="phone"
+                name="Phone"
                 type="text"
                 required
-                value={formData.phone}
+                value={formData["Phone"]}
                 onChange={handleChange}
                 className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-600"
                 placeholder="Phone Number"
@@ -157,10 +156,10 @@ const AdmissionForm = ({ isVisible, onClose, onSubmit }) => {
               </label>
               <input
                 id="course"
-                name="course"
+                name="Course"
                 type="text"
                 required
-                value={formData.course}
+                value={formData["Course"]}
                 onChange={handleChange}
                 className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-600"
                 placeholder="Please type the preferred course"
