@@ -53,12 +53,12 @@ const AdmissionForm = ({ isVisible, onClose, onSubmit }) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 px-8 max-sm:px-2">
       <div className="w-full max-w-3xl p-8 space-y-8 bg-white rounded-xl shadow-lg relative">
-        <button
+{/*         <button
           onClick={onClose}
           className="absolute top-1 right-2 text-gray-500 hover:text-gray-700 h-12 w-12 scale-125"
         >
           &times;
-        </button>
+        </button> */}
 
         {/* Top Navbar */}
         <div className="flex justify-between items-center p-0 border-b-2 border-gray-200">
