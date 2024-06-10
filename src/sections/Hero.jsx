@@ -41,7 +41,7 @@ const Hero = ({ onApplyNowClick }) => {
         </div>
       </div>
       {/* Hero Right */}
-      <div className="max-lg:hidden">
+      <div className="hidden max-lg:block">
         <img src={img} alt="" />
       </div>
     </div>
