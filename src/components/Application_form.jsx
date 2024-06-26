@@ -25,7 +25,7 @@ const AdmissionForm = ({ isVisible, onClose, onSubmit }) => {
     console.log("Form Data Submitted: ", formData);
     try {
       const response = await axios.post(
-        "https://sheet.best/api/sheets/974dbd56-2f9e-4d86-9d81-a3a03b837e1c",
+        "https://sheet.best/api/sheets/2388ca46-8122-40fc-8d0e-01c6829b69dc",
         formData
       );
 
